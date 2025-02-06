@@ -1,0 +1,64 @@
+body{
+    background-color: #ddd;
+}
+
+.data-container{
+    width: 500px;
+    margin: 100px auto;
+    padding: 40px 20px;
+    background-color: white;
+    border: 3px solid #1a53ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+h1, p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+input[type="text"],[type="number"],[type="date"]{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    margin-bottom: 20px;
+    border: 1px solid #1a53ff;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-bottom: 70px;
+    margin: 10px 0px;
+    margin-bottom: 20px;
+    border: 1px solid #1a53ff;
+    resize: none;
+}
+
+label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: smaller;
+}
+
+.send, .update{
+    width: 30%;
+    padding: 10px;
+    margin: 10px 0;
+    margin-bottom: 20px;
+    border: 2px solid #1a53ff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: right;
+}
+
+input[type="submit"]:hover{
+    background-color: #1a53ff;
+}

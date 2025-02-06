@@ -1,0 +1,131 @@
+h1, h3, p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th{
+    background-color: #0066cc;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+tr{
+    border: 1px solid #ddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+tr:hover{
+    background-color: #ddd;
+}
+
+.create{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: none;
+    background-color: #00cc00;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+.create:hover{
+    background-color: #006600;
+}
+
+.edit{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border: none;
+    background-color: #ff9900;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.edit:hover{
+    background-color: #cc7a00;
+}
+.delete{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+    border: none;
+    background-color: #e63900;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.delete:hover{
+    background-color: #992600;
+}
+
+.search{
+    padding: 8px;
+    border: none;
+    background-color: #660066;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.search:hover{
+    background-color: #4d004d;
+}
+
+.searchbox{
+    position: absolute;
+    top: 130px;
+    right: 10px;
+}
+
+input[type="text"]{
+    padding: 10px;
+    font-size: 15px;
+}
+
+.account{
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.logout{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e60000;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    cursor: pointer;
+}
+.logout:hover{
+    background-color: #990000;
+}

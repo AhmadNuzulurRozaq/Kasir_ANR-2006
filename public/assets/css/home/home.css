@@ -1,0 +1,43 @@
+h1, p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.account{
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.logout{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e60000;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    cursor: pointer;
+}
+.logout:hover{
+    background-color: #990000;
+}
+
+button{
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #00b33c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+}
+button:hover{
+    background-color: #00802b;
+}
+td{
+    padding-right: 10px;
+}
