@@ -10,14 +10,16 @@
 <body>
     <div class="judul">
         <h1>Kasir | Tabel Utama</h1>
-        <p>List Data Detail Penjualan</p>
+        <p>List Data Detail Penjualan | <a href="/home"><input type="submit" value="<--- KEMBALI" class="back"></a></p>
     </div>
     <hr>
-    <div class="create-button">
-        <a href="/detailpenjualan/tambah">
-            <input type="submit" value="TAMBAH DATA" class="create">
-        </a>
-    </div>
+    @if (auth()->user()->role == 'admin')
+        <div class="create-button">
+            <a href="/detailpenjualan/tambah">
+                <input type="submit" value="TAMBAH DATA" class="create">
+            </a>
+        </div>
+    @endif
     <div class="searchbox">
         <form>
             <input type="text" name="keyword" required>
@@ -26,7 +28,7 @@
     </div>
     <div class="account">
         <p>
-            Selamat Datang, <strong>{{Auth::user()->name}}</strong>
+            Selamat Datang, <strong>{{Auth::user()->name}}, {{Auth::user()->role}}</strong>
         </p>
         <form action="{{route('auth.logout')}}" method="POST">
             @csrf
@@ -40,7 +42,10 @@
             <th>PRODUK ID</th>
             <th>JUMLAH PRODUK</th>
             <th>SUBTOTAL</th>
-            <th colspan="2">AKSI</th>
+            @if (auth()->user()->role == 'admin')
+                <th colspan="2">AKSI</th>   
+            @endif
+            
         </tr>
 
         @foreach ($detailpenjualan as $anr)
@@ -50,19 +55,21 @@
                 <td>{{$anr->ProdukID}}</td>
                 <td>{{$anr->JumlahProduk}}</td>
                 <td>Rp. {{$anr->Subtotal}}</td>
-                <td>
-                    <form action="/detailpenjualan/{{$anr->DetailID}}/edit">
-                        @csrf
-                        <input type="submit" value="EDIT" class="edit">
-                    </form>
-                </td>
-                <td>
-                    <form action="/detailpenjualan/{{$anr->DetailID}}" method="POST">
-                        @csrf
-                        @method('delete')
-                        <input type="submit" value="HAPUS" class="delete">
-                    </form>
-                </td>
+                @if (auth()->user()->role == 'admin')
+                    <td>
+                        <form action="/detailpenjualan/{{$anr->DetailID}}/edit">
+                            @csrf
+                            <input type="submit" value="EDIT" class="edit">
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/detailpenjualan/{{$anr->DetailID}}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <input type="submit" value="HAPUS" class="delete">
+                        </form>
+                    </td>
+                @endif
             </tr>
         @endforeach
     </table>

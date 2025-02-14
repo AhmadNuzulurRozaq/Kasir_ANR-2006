@@ -12,39 +12,64 @@
         <h1>REGISTRASI AKUN</h1>
         <p>Silahkan membuat akun terlebih dahulu.</p>
         <hr>
+        <div class="error">
+            @error('name')
+            <div class="invalid-feedback">
+                <ul>
+                    <li><strong>{{$message}}</strong></li>
+                </ul>
+            </div>
+            @enderror
+            @error('email')
+            <div class="invalid-feedback">
+                <ul>
+                    <li><strong>{{$message}}</strong></li>
+                </ul>
+            </div>
+            @enderror
+            @error('role')
+            <div class="invalid-feedback">
+                <ul>
+                    <li><strong>{{$message}}</strong></li>
+                </ul>
+            </div>
+            @enderror
+            @error('password')
+            <div class="invalid-feedback">
+                <ul>
+                    <li><strong>{{$message}}</strong></li>
+                </ul>
+            </div>
+            @enderror
+            @error('confirm-password')
+            <div class="invalid-feedback">
+                <ul>
+                    <li><strong>{{$message}}</strong></li>
+                </ul>
+            </div>
+            @enderror
+        </div>
         <form action="{{ route('auth.store') }}" method="POST">
             @csrf
             <label for="name">Nama :</label>
-            <input type="text" name="name" placeholder="Masukkan Nama..." class="@error('name') is-invalid @enderror" value="{{ old('name') }}" required>
-            @error('name')
-            <div class="invalid-feedback">
-                {{$message}}
-            </div>
-            @enderror
+            <input type="text" name="name" placeholder="Masukkan Nama..." value="{{ old('name') }}">
 
             <label for="email">E-mail :</label>
-            <input type="email" name="email" placeholder="Masukkan E-mail..." class="@error('email') is-invalid @enderror" value="{{ old('email') }}" required>
-            @error('email')
-            <div class="invalid-feedback">
-                {{$message}}
-            </div>
-            @enderror
+            <input type="email" name="email" placeholder="Masukkan E-mail..." value="{{ old('email') }}">
+
+            <label for="role">Role / Hak Akses</label>
+            <select name="role">
+                <option value="select" disabled selected>~ KLIK ~</option>
+                <option value="Admin">Admin / Akses Penuh</option>
+                <option value="User">User / Terbatas</option>
+            </select>
 
             <label for="password">Password :</label>
-            <input type="password" name="password" placeholder="Masukkan Password..." class="@error('password') is-invalid @enderror" required>
-            @error('password')
-            <div class="invalid-feedback">
-                {{$message}}
-            </div>
-            @enderror
+            <input type="password" name="password" placeholder="Masukkan Password...">
 
             <label for="confirm-password">Konfirmasi Password :</label>
-            <input type="password" name="confirm-password" placeholder="Masukkan Konfirmasi Password..." class="@error('confirm-password') is-invalid @enderror" required>
-            @error('confirm-password')
-            <div class="invalid-feedback">
-                {{$message}}
-            </div>
-            @enderror
+            <input type="password" name="confirm-password" placeholder="Masukkan Konfirmasi Password...">
+
             <input type="submit" value="REGISTRASI" class="register">
         </form>
         <p align="center">Sudah punya akun ? <a href="{{ route('login') }}">LOGIN SEKARANG</a></p>

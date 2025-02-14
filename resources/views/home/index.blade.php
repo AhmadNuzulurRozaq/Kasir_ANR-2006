@@ -15,7 +15,7 @@
         </div>
         <div class="account">
             <p>
-                Selamat Datang, <strong>{{Auth::user()->name}}</strong>
+                Selamat Datang, <strong>{{Auth::user()->name}}, {{Auth::user()->role}}</strong>
             </p>
             <form action="{{route('auth.logout')}}" method="POST">
                 @csrf

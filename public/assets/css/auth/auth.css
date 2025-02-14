@@ -29,6 +29,7 @@ input[type="email"],[type="text"],[type="password"]{
 label{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: smaller;
+    font-weight: bold;
 }
 
 .register, .login{
@@ -49,4 +50,18 @@ label{
 
 input[type="submit"]:hover{
     background-color: #1a53ff;
+}
+
+select{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    margin-bottom: 20px;
+    border: 1px solid #1a53ff;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+ul{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

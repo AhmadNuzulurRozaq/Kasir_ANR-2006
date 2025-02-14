@@ -37,7 +37,7 @@ tr:hover{
     color: white;
     font-weight: bold;
     border-radius: 3px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .create:hover{
@@ -98,8 +98,8 @@ tr:hover{
 
 .searchbox{
     position: absolute;
-    top: 130px;
-    right: 10px;
+    top: 50px;
+    left: 550px;
 }
 
 input[type="text"]{
@@ -128,4 +128,17 @@ input[type="text"]{
 }
 .logout:hover{
     background-color: #990000;
+}
+
+.back{
+    padding: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #ddd;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.back:hover{
+    background-color: #9e9d9d;
+    
 }
